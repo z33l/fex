@@ -1,7 +1,15 @@
 /* global famous */
-console.log(famous);
+var obj = famous.core;
+console.log(obj);
 
-var Context = famous.core.context;
-var Engine = famous.core.engine;
+var Engine = famous.core.Engine;
+var Surface = famous.core.Surface;
 
-console.log(Engine);
+var context = Engine.createContext();
+
+var surface = new Surface({
+    size: [50,50],
+    properties: { background: 'red' }
+});
+
+context.add(surface);
