@@ -10,12 +10,20 @@ var Transform = famous.core.Transform;
 var context = Engine.createContext();
 
 var surface = new Surface({
-    size: [50,50],
+    size: [70, 70],
     properties: { background: 'red' }
 });
 
-var modifier = new Modifier({
-    transform : Transform.translate(100, 100, 0)
+var sizeModifier = new Modifier({
+    size: [200, 200],
+    align: [0.5, 0.5]
 });
 
-context.add(modifier).add(surface);
+var centerModifier = new Modifier({
+    //origin: [0.5,0.5]
+});
+
+context
+  .add(sizeModifier)
+  .add(centerModifier)
+  .add(surface);
