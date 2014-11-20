@@ -1,5 +1,5 @@
 /* global famous */
-var obj = famous.core;
+var obj = famous;
 console.log(obj);
 
 var Engine = famous.core.Engine;
